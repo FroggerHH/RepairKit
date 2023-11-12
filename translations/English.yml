@@ -1,0 +1,2 @@
+RepairKit_none: "none"
+item_desc_ItemsRepairKit: "Restores durability of all items except armor on {repairPercent}%"

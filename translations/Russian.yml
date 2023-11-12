@@ -1,0 +1,2 @@
+RepairKit_none: "none"
+item_desc_ItemsRepairKit: "Восстанавливает прочность всех предметов роме брони на {repairPercent}%"
