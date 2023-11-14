@@ -14,7 +14,6 @@ public static class DoRemLogic
             "JF_ArmorRepairKit" => RepairMode.Armor,
             _ => RepairMode.None
         };
-        Debug($"DoRemLogic: repairMode: {repairMode}");
 
         if (repairMode == RepairMode.None) return;
         foreach (var itemData in __instance.GetInventory().GetAllItems())
@@ -26,12 +25,18 @@ public static class DoRemLogic
             var isArmor = itemType == Helmet || itemType == Chest || itemType == Legs || itemType == Shoulder;
             // var isOther = itemType == Shield || itemType == Misc || itemType == Tool || itemType == Utility;
             var isOther = !isArmor;
-
-            var value = isArmor && repairMode == RepairMode.Armor
-                ? armorKit_percent.Value
-                : (isOther && repairMode == RepairMode.Items ? itemKit_percent.Value : 0);
-            Debug($"DoRemLogic: isArmor: {isArmor}, isOther: {isOther}, value: {value}");
-            itemData.m_durability += itemData.GetMaxDurability() * value / 100;
+            float value;
+            if (isArmor && repairMode == RepairMode.Armor)
+            {
+                value = armorKit_percent.Value;
+                value += itemData.m_quality * aditionalPercentsByKitQuality.Value;
+                itemData.m_durability += itemData.GetMaxDurability() * value / 100;
+            } else if (isOther && repairMode == RepairMode.Items)
+            {
+                value = itemKit_percent.Value;
+                value += itemData.m_quality * aditionalPercentsByKitQuality.Value;
+                itemData.m_durability += itemData.GetMaxDurability() * value / 100;
+            }
         }
     }
 }

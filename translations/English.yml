@@ -1,2 +1,4 @@
 RepairKit_none: "none"
-item_desc_ItemsRepairKit: "Restores durability of all items except armor on {repairPercent}%"
+item_desc_ItemsRepairKit: "Restores durability of all items except armor on {repairPercent}%. Plus {aditionalPercentsByKitQuality}% for each level."
+item_desc_ArmorRepairKit: "Restores durability of armor on {repairPercent}%. Plus {aditionalPercentsByKitQuality}% for each level."
+noItemsToRepair: "No items to repair"

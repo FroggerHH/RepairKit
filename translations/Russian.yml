@@ -1,2 +1,4 @@
 RepairKit_none: "none"
-item_desc_ItemsRepairKit: "Восстанавливает прочность всех предметов роме брони на {repairPercent}%"
+item_desc_ItemsRepairKit: "Восстанавливает прочность всех предметов роме брони на {repairPercent}%. Плюс {aditionalPercentsByKitQuality}% за каждый уровень."
+item_desc_ArmorRepairKit: "Восстанавливает прочность брони на {repairPercent}%. Плюс {aditionalPercentsByKitQuality}% за каждый уровень."
+noItemsToRepair: "Нет предметов для ремонта"

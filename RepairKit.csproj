@@ -84,6 +84,7 @@
         <Compile Include="Managers\LocalizationManager.cs" />
         <Compile Include="Patch\DoRemLogic.cs" />
         <Compile Include="Patch\FixItems.cs" />
+        <Compile Include="Patch\PreventUsingKitWhenAllItemsAreOkay.cs" />
         <Compile Include="Plugin.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="RepairMode.cs" />
