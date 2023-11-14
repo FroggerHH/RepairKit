@@ -23,20 +23,14 @@ public static class DoRemLogic
 
             if (shared.m_useDurability == false) continue;
             var isArmor = itemType == Helmet || itemType == Chest || itemType == Legs || itemType == Shoulder;
-            // var isOther = itemType == Shield || itemType == Misc || itemType == Tool || itemType == Utility;
             var isOther = !isArmor;
-            float value;
+            float value = 0;
             if (isArmor && repairMode == RepairMode.Armor)
-            {
                 value = armorKit_percent.Value;
-                value += itemData.m_quality * aditionalPercentsByKitQuality.Value;
-                itemData.m_durability += itemData.GetMaxDurability() * value / 100;
-            } else if (isOther && repairMode == RepairMode.Items)
-            {
+            else if (isOther && repairMode == RepairMode.Items)
                 value = itemKit_percent.Value;
-                value += itemData.m_quality * aditionalPercentsByKitQuality.Value;
-                itemData.m_durability += itemData.GetMaxDurability() * value / 100;
-            }
+
+            itemData.m_durability += itemData.GetMaxDurability() * value / 100;
         }
     }
 }
