@@ -9,11 +9,8 @@ using BepInEx.Configuration;
 using YamlDotNet.Serialization;
 using Debug = UnityEngine.Debug;
 
-// ReSharper disable IdentifierTypo
-
 // ReSharper disable CheckNamespace
-
-namespace LocalizationManager;
+namespace RepairKit.LocalizationManager;
 
 [PublicAPI]
 public class Localizer

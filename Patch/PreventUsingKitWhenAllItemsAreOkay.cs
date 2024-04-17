@@ -24,7 +24,7 @@ public static class PreventUsingKitWhenAllItemsAreOkay
             if (itemData.m_shared.m_useDurability && itemData.m_durability < itemData.GetMaxDurability()) return true;
         }
 
-        __instance.Message(MessageHud.MessageType.Center, "$noItemsToRepair");
+        __instance.Message(MessageType.Center, "$noItemsToRepair");
         __result = false;
         return false;
     }

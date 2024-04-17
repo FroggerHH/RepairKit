@@ -1,7 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
-using ItemManager;
-using LocalizationManager;
+using RepairKit.ItemManager;
+using RepairKit.LocalizationManager;
 
 namespace RepairKit;
 
@@ -10,8 +10,8 @@ public class Plugin : BaseUnityPlugin
 {
     private const string
         ModName = "RepairKit",
-        ModVersion = "1.0.0",
-        ModAuthor = "Frogger", 
+        ModVersion = "1.0.1",
+        ModAuthor = "Frogger",
         ModGUID = $"com.{ModAuthor}.{ModName}";
 
     public static ConfigEntry<float> itemKit_percent;
